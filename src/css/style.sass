@@ -1,0 +1,481 @@
+  
+h2, h3, h1
+  margin: 0
+  
+@mixin title ()
+  margin: 0 auto
+  margin-top: 19px
+  text-align: center
+  opacity: 0.8
+  color: #4d4d4d
+  font-family: Asap
+  font-size: 46px
+  font-weight: 700
+  line-height: 49px
+  text-transform: uppercase
+  letter-spacing: 5.52px
+
+@mixin line ()
+  width: 60px
+  height: 4px
+  background-color: #212121
+  opacity: 0.6
+  
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+.container
+  max-width: 1170px
+  margin: 0 auto
+  padding: 0
+  position: relative
+
+.home
+    padding-top: 31px
+    min-height: 750px
+    background: url(../img/bg/bg_element_.png) center (center / cover) no-repeat
+    .header
+        min-height: 55px
+        .logo
+            .logo_img
+                display: block
+                padding-left: 29px
+            &_text
+                color: #000000
+                font-family: Lato
+                font-size: 14px
+                font-weight: 400
+                text-transform: uppercase
+                letter-spacing: 2.04px
+                line-height: 14px
+                margin-top: 10px
+                margin-bottom: 5px
+            &_text2
+                color: #000000
+                font-family: Lato
+                font-size: 4px
+                font-weight: 400
+                text-transform: uppercase
+                letter-spacing: 1.54px
+                padding-left: 22px
+        .menu ul
+            display: flex
+            list-style: none
+            justify-content: space-between
+        a
+            text-decoration: none
+            color: #4d4d4d
+            font-family: Asap
+            font-size: 16px
+            font-weight: 500
+            &:after
+                content: ''
+                display: block
+                height: 2px
+                width: 0%
+                background-color: grey
+                transition: 0.5s all
+            &:hover
+                &:after
+                    width: 100%
+    .hero_area
+        .hero_content
+            margin-top: 175px
+            h1
+                margin: 0
+                color: #4d4d4d
+                font-family: Asap
+                font-size: 90px
+                font-weight: 600
+            h2
+                margin: 0
+                opacity: 0.54
+                color: #4d4d4d
+                font-family: Asap
+                font-size: 22px
+                font-weight: 600
+        .btn_knowmore
+            width: 160px
+            margin-top: 28px
+            height: 50px
+            box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1)
+            background-color: #ffffff
+            color: #4d4d4d
+            font-family: Asap
+            margin-left: 2px
+            border: 0px
+            text-align: center
+            font-size: 15px
+            font-weight: 600
+            text-transform: uppercase
+            letter-spacing: 0.96px
+            cursor: pointer
+        .btn_hireme
+            width: 160px
+            height: 50px
+            margin-left: 15px
+            background-color: rgba(0, 0, 0, 0)
+            border: 1px solid #4d4d4d
+            color: #4d4d4d
+            font-family: Asap
+            letter-spacing: 0.96px
+            font-size: 15px
+            font-weight: 600
+            text-transform: uppercase
+            cursor: pointer
+        .hero_img
+            position: absolute
+            left: 157px
+            top: 70px
+.about
+    min-height: 676px
+    padding: 109px 0 124px 0
+    .content
+        padding: 70px 0 0 0
+        .line
+            width: 60px
+            height: 4px
+            background-color: #212121
+            opacity: 0.6
+        #knowsmore
+            opacity: 0.8
+            color: #4d4d4d
+            margin: 0
+            margin-top: 19px
+            font-family: Asap
+            font-size: 46px
+            font-weight: 700
+            line-height: 49px
+            text-transform: uppercase
+            letter-spacing: 5.52px
+        .text
+            color: #4d4d4d
+            margin-top: 10px
+            margin: 0px 0px 0px 3px
+            font-family: Asap
+            font-size: 16px
+            font-weight: 500
+            line-height: 26px
+        .dowmycv
+            width: 245px
+            height: 50px
+            margin-top: 34px
+            background-color: rgba(0, 0, 0, 0)
+            border: 1px solid #4d4d4d
+            color: #4d4d4d
+            font-family: Asap
+            font-size: 16px
+            font-weight: 600
+            text-transform: uppercase
+            cursor: pointer
+        .aboutme_img
+            .img_6
+              display: inline-block
+              padding: 0
+              margin: 0        
+.services
+  min-height: 693
+  padding: 119px 0 113px 0
+  background: url(../img/bg/Project_BG.png) center (center / cover) no-repeat
+  .service_heading
+    .line
+      margin: 0 auto
+      @include line()
+    h2
+      @include title()
+  .service_items
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: space-between
+    justify-content: space-around
+    .service_item
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: flex-start
+      margin: 0 110px
+      margin-top: 70px
+      max-width: 206px
+      &:nth-child(6)
+        margin-right: 90px
+        padding-left: 15px
+      p
+        margin: 0
+        color: #4d4d4d
+        font-family: Asap
+        font-size: 22px
+        font-weight: 600
+        text-align: center
+        vertical-align: bottom
+      .service_icon
+        align-self: center
+.skills
+  min-height: 766px
+  padding: 117px 0 125px 0
+  .skills_header
+    .line
+      margin: 0 auto
+      @include line()
+    h2
+      @include title()
+  .graf
+    margin-top: 55px
+    .graf_bg
+      display: flex
+      flex-direction: row
+      justify-content: center
+      .persentages
+        margin-right: -15px
+        h3
+          color: #4d4d4d
+          font-family: Asap
+          font-size: 15px
+          font-weight: 400
+          margin-bottom: 45px
+    .skills_item
+      &XD
+        margin-left: 18%
+      &AE
+        margin-left: 16.3%
+      &PS
+        margin-left: 17%
+      &AI
+        margin-left: 15.3%
+.portfolio
+  min-height: 1095px
+  background: url(../img/bg/Project_BG.png) center (center / cover) no-repeat
+  padding: 125px 0
+  &_header
+    .line
+      margin: 0 auto
+      @include line()
+    h2
+      @include title()
+  &_img
+    margin-top: 45px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-content: space-between
+    .portfolio_item
+      margin-bottom: 30px
+  .load_more
+    display: block
+    width: 190px
+    height: 50px
+    margin: 0 auto
+    box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1)
+    background-color: #ffffff
+    border: 0px
+    color: #4d4d4d
+    font-family: Asap
+    font-size: 16px
+    font-weight: 600
+    letter-spacing: 0.96px
+    cursor: pointer
+    text-align: center
+
+.testimonials
+  min-height: 711px
+  padding: 126px 0 122px 0
+  &_header
+    .line
+      margin: 0 auto
+      @include line()
+    h2
+      @include title()
+  &_slider
+    margin: 0 auto
+    border: 1px solid #212121
+    margin-top: 57px
+    width: 81%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    height: 349px
+    .content
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: center
+      align-items: flex-start
+      &_img
+        margin-right: 20px
+      .testimonials_text
+        h2      
+          opacity: 0.9
+          color: #212121
+          font-family: Asap
+          font-size: 30px
+          font-weight: 600
+          text-transform: uppercase
+        .where_is
+          margin-top: 2px
+          opacity: 0.9
+          color: #212121
+          font-family: Asap
+          font-weight: 600
+          font-size: 12px
+          font-style: italic
+          text-transform: uppercase
+        p      
+          margin-top: 10px
+          opacity: 0.6
+          max-width: 569px
+          color: #212121
+          line-height: 23px
+          font-family: Asap
+          font-size: 15px
+          font-weight: 400
+          text-transform: uppercase
+    .slide_numbers
+      display: flex
+      justify-content: center
+      margin: 0 -10px
+      cursor: pointer
+      .slide_passive
+        width: 13px
+        height: 13px
+        border: 1px solid #212121
+      .slide_active
+        width: 13px
+        height: 13px
+        margin: 0 10px
+        background-color: #212121
+.funfact
+  min-height: 300px
+  background: url(../img/bg/bg.png) center (center / cover) no-repeat
+  padding: 52px 0 60px 0
+  margin-bottom: 155px
+  &_items
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+  .funfact_item
+    display: flex
+    flex-direction: column
+    max-width: 206px
+    .funfact_img
+      align-self: center
+    .funfact_item_text
+      margin-top: 15px
+      color: #4d4d4d
+      font-family: Asap
+      font-size: 24px
+      font-weight: 600
+      text-align: center
+      p
+        margin: 0
+    .funfact_item_text
+      opacity: 0.9
+      color: #212121
+      font-family: Asap
+      font-size: 22px
+      font-weight: 400
+      text-transform: uppercase
+      font-family: "Asap"
+      font-weight: 400
+    .funfact_item_number
+      text-align: center
+      font-family: "Asap Medium"
+      font-size: 30px
+      margin: 0
+      font-weight: 500
+      opacity: 0.9
+      color: #212121
+      font-family: Asap
+
+.foot
+  min-height: 787px
+  padding: 145px 0 30px 0
+  background: url(../img/bg/contact_bg.png) center (center / cover) no-repeat
+  &_header
+    .line
+      margin: 0 auto
+      @include line()
+    h2
+      @include title()
+      opacity: 0.9
+      color: #ffffff
+  .form
+    margin: 0 auto
+    margin-top: 70px
+
+.form_name
+  margin-right: 30px
+  width: 369px
+  padding-left: 10px
+  height: 57px
+  background-color: #ffffff
+  border: 0
+  opacity: 1
+  color: #212121
+  font-family: Asap
+  font-size: 16px
+  font-weight: 400
+  margin-bottom: 30px
+  letter-spacing: 0.96px
+
+.form_e-mail
+  width: 369px
+  padding-left: 10px
+  height: 57px
+  background-color: #ffffff
+  border: 0
+  opacity: 1
+  color: #212121
+  font-family: Asap
+  font-size: 16px
+  font-weight: 400
+  margin-bottom: 30px
+  letter-spacing: 0.96px
+
+.form_message
+  width: 770px
+  min-height: 207px
+  background-color: #ffffff
+  padding-left: 10px
+  height: 57px
+  background-color: #ffffff
+  border: 0
+  opacity: 1
+  color: #212121
+  font-family: Asap
+  font-size: 16px
+  font-weight: 400
+  margin-bottom: 30px
+
+.btn_send_form
+  width: 123px
+  height: 50px
+  display: block
+  margin-left: 338px
+  box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1)
+  background-color: #ffffff
+  border: 0
+  color: #4d4d4d
+  font-family: Asap
+  font-size: 16px
+  font-weight: 600
+  text-transform: uppercase
+  letter-spacing: 0.96px
+
+.footer_line
+  margin-top: 58px
+  width: 1170px
+  height: 1px
+  background-color: #ffffff
+
+.foottext
+  color: #ffffff
+  font-family: Montserrat
+  font-size: 16px
+  font-weight: 400
+  line-height: 67px
+  letter-spacing: 0.96px
+  text-align: center
